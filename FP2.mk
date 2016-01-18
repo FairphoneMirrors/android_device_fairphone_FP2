@@ -156,6 +156,12 @@ PRODUCT_PACKAGES += iFixit
 # Amaze File Manager
 PRODUCT_PACKAGES += Amaze 
 
+
+# SuperUser
+FP2_USE_APPOPS_SU := true
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.root_access=0
+
 # Add boot animation
 PRODUCT_COPY_FILES += device/fairphone_devices/FP2/bootanimation.zip:system/media/bootanimation.zip
 
