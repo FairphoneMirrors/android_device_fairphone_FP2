@@ -15,8 +15,11 @@ endif #TARGET_USES_QCOM_BSP
 # media_profiles and media_codecs xmls for 8974
 ifeq ($(TARGET_ENABLE_QC_AV_ENHANCEMENTS), true)
 PRODUCT_COPY_FILES += device/fairphone_devices/FP2/media/media_profiles_8974.xml:system/etc/media_profiles.xml \
-                      device/fairphone_devices/FP2/media/media_codecs_8974.xml:system/etc/media_codecs.xml
+                      device/qcom/msm8974/media/media_codecs_8974.xml:system/etc/media_codecs.xml \
+                      device/fairphone_devices/FP2/media/media_codecs_performance_8974.xml:system/etc/media_codecs_performance.xml
 endif  #TARGET_ENABLE_QC_AV_ENHANCEMENTS
+PRODUCT_PROPERTY_OVERRIDES += \
+      dalvik.vm.heapminfree=2m
 
 PRODUCT_COPY_FILES += \
     device/fairphone_devices/FP2/apns-conf.xml:system/etc/apns-conf.xml
@@ -73,6 +76,9 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += wcnss_service
 
+# MIDI feature
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.software.midi.xml:system/etc/permissions/android.software.midi.xml
 #ANT stack
 PRODUCT_PACKAGES += \
         AntHalService \
@@ -141,6 +147,9 @@ PRODUCT_BOOT_JARS += qcom.fmradio
 PRODUCT_BOOT_JARS += security-bridge
 PRODUCT_BOOT_JARS += qsb-port
 PRODUCT_BOOT_JARS += oem-services
+PRODUCT_BOOT_JARS += com.qti.dpmframework
+PRODUCT_BOOT_JARS += dpmapi
+PRODUCT_BOOT_JARS += com.qti.location.sdk
 endif
 
 PRODUCT_PACKAGES += \

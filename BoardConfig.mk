@@ -10,7 +10,10 @@ TARGET_KERNEL_ARCH := arm
 BOARD_USES_GENERIC_AUDIO := true
 USE_CAMERA_STUB := false
 
+TARGET_KERNEL_APPEND_DTB := false
+
 TARGET_USES_AOSP := false
+
 # Compile with msm kernel
 TARGET_COMPILE_WITH_MSM_KERNEL := true
 TARGET_HAS_QC_KERNEL_SOURCE := true
@@ -66,7 +69,7 @@ BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_PERSISTIMAGE_FILE_SYSTEM_TYPE := ext4
 
 ifneq (,$(filter userdebug eng,$(TARGET_BUILD_VARIANT)))
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3b7 ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3b7 ehci-hcd.park=3 androidboot.selinux=permissive androidboot.bootdevice=msm_sdcc.1
 else
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3b7 ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1
 endif
@@ -103,7 +106,7 @@ TARGET_HW_DISK_ENCRYPTION := false
 
 # Workaround framework bluetooth dependency
 BOARD_HAVE_BLUETOOTH := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/generic/common/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/qcom/common
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 
 TARGET_INIT_VENDOR_LIB := libinit_msm
@@ -120,5 +123,7 @@ TW_TARGET_USES_QCOM_BSP := true
 TW_NO_EXFAT := true
 TW_NO_EXFAT_FUSE := true
 
+# Control flag between KM versions
+TARGET_HW_KEYMASTER_V03 := true
 
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
