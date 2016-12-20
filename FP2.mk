@@ -205,3 +205,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # we don't have the calibration data so don't generate persist.img
 FP2_SKIP_PERSIST_IMG := true
+
+# display density
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sf.lcd_density=420
