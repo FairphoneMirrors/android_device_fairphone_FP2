@@ -1,3 +1,6 @@
+# Inherit from variables defined elsewhere first (they could tune this file)
+$(call inherit-product-if-exists, vendor/fairphone-extra/fairphone-extra.mk)
+
 TARGET_USES_QCOM_BSP := true
 TARGET_USES_QCA_NFC := other
 
