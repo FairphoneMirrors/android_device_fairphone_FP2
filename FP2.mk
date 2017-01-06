@@ -24,6 +24,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_COPY_FILES += \
     device/fairphone_devices/FP2/apns-conf.xml:system/etc/apns-conf.xml
 
+PRODUCT_PROPERTY_OVERRIDES += ro.frp.pst=/dev/block/bootdevice/by-name/pad
+
 $(call inherit-product, device/qcom/common/common.mk)
 
 PRODUCT_NAME := FP2
@@ -211,5 +213,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=420
 
 $(call inherit-product, build/target/product/product_launched_with_l_mr1.mk)
-
-PRODUCT_PROPERTY_OVERRIDES += ro.frp.pst=/dev/block/bootdevice/by-name/pad
