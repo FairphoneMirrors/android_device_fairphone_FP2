@@ -6028,7 +6028,7 @@
       type="mms"
   />
 
-  <apn carrier="LUXGSM MMS"
+  <apn carrier="POST MMS"
       mcc="270"
       mnc="01"
       apn="mms.pt.lu"
