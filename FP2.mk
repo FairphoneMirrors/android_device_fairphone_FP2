@@ -213,3 +213,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=420
 
 $(call inherit-product, build/target/product/product_launched_with_l_mr1.mk)
+
+PRODUCT_PACKAGES += \
+    libhealthd.FP2
