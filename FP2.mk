@@ -22,6 +22,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
       dalvik.vm.heapminfree=2m
 
 PRODUCT_COPY_FILES += \
+    device/fairphone_devices/FP2/old-apns-conf.xml:system/etc/old-apns-conf.xml
+
+PRODUCT_COPY_FILES += \
     device/fairphone_devices/FP2/apns-conf.xml:system/etc/apns-conf.xml
 
 PRODUCT_PROPERTY_OVERRIDES += ro.frp.pst=/dev/block/bootdevice/by-name/pad
