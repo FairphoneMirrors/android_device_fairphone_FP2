@@ -213,7 +213,7 @@ FP2_SKIP_PERSIST_IMG := true
 
 # display density
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=420
+    ro.sf.lcd_density=480
 
 $(call inherit-product, build/target/product/product_launched_with_l_mr1.mk)
 
