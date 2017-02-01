@@ -159,11 +159,8 @@ endif
 
 PRODUCT_PACKAGES += \
                     FairphoneUpdater \
-                    FairphoneLauncher3 \
                     AppOps \
-                    MyContactsWidget \
                     ClockWidget \
-                    FairphonePrivacyImpact \
                     FairphoneSetupWizard \
                     ProgrammableButton \
                     ProximitySensorTools \
