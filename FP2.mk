@@ -29,6 +29,11 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PROPERTY_OVERRIDES += ro.frp.pst=/dev/block/bootdevice/by-name/pad
 
+# Do not enable data roaming by default
+PRODUCT_PROPERTY_OVERRIDES := $(filter-out ro.com.android.dataroaming=%,\
+    $(PRODUCT_PROPERTY_OVERRIDES)) \
+    ro.com.android.dataroaming=false
+
 $(call inherit-product, device/qcom/common/common.mk)
 
 PRODUCT_NAME := FP2
