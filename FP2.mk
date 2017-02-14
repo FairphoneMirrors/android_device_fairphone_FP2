@@ -169,7 +169,8 @@ PRODUCT_PACKAGES += \
                     FairphoneSetupWizard \
                     ProgrammableButton \
                     ProximitySensorTools \
-		    Checkup
+		    Checkup \
+		    FairphoneLauncher3
 
 PRODUCT_PACKAGES += iFixit
 
