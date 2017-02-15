@@ -222,3 +222,5 @@ $(call inherit-product, build/target/product/product_launched_with_l_mr1.mk)
 
 PRODUCT_PACKAGES += \
     libhealthd.FP2
+
+PRODUCT_PACKAGES += xdivert
