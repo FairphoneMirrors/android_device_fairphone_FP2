@@ -224,3 +224,6 @@ PRODUCT_PACKAGES += \
     libhealthd.FP2
 
 PRODUCT_PACKAGES += xdivert
+
+# We need to ship Mms for backward compatibility
+PRODUCT_PACKAGES += Mms
