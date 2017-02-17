@@ -18,8 +18,6 @@ PRODUCT_COPY_FILES += device/fairphone_devices/FP2/media/media_profiles_8974.xml
                       device/qcom/msm8974/media/media_codecs_8974.xml:system/etc/media_codecs.xml \
                       device/fairphone_devices/FP2/media/media_codecs_performance_8974.xml:system/etc/media_codecs_performance.xml
 endif  #TARGET_ENABLE_QC_AV_ENHANCEMENTS
-PRODUCT_PROPERTY_OVERRIDES += \
-      dalvik.vm.heapminfree=2m
 
 PRODUCT_COPY_FILES += \
     device/fairphone_devices/FP2/old-apns-conf.xml:system/etc/old-apns-conf.xml
