@@ -145,5 +145,8 @@ audio.offload.gapless.enabled=false
 persist.radio.multisim.config=dsds
 ro.adb.secure=1
 
+# disable flex mapping
+persist.radio.flexmap_type=none
+
 #enable OTG support
 persist.sys.isUsbOtgEnabled=true
