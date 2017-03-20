@@ -172,7 +172,6 @@ PRODUCT_PACKAGES += \
                     ClockWidget \
                     FairphoneSetupWizard \
                     ProgrammableButton \
-                    ProximitySensorTools \
 		    Checkup \
 		    FairphoneLauncher3
 
@@ -227,3 +226,8 @@ PRODUCT_PACKAGES += xdivert
 
 # We need to ship Mms for backward compatibility
 PRODUCT_PACKAGES += Mms
+
+# ProximitySensor app
+PRODUCT_PACKAGES += ProximitySensorTools
+# Don't forget that prebuilt that we need to make available
+PRODUCT_COPY_FILES += vendor/fairphone/packages/apps/ProximitySensor/prebuilts/bin/senread:$(PRODUCT_OUT)/system/bin/senread
