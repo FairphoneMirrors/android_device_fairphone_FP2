@@ -33530,4 +33530,11 @@
       type="default"
   />
 
+  <apn carrier="Eagle Mobile"
+      apn="internet"
+      mcc="276"
+      mnc="03"
+      type="default,supl,mms"
+  />
+
 </apns>
