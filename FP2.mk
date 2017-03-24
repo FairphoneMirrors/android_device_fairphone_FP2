@@ -164,6 +164,9 @@ PRODUCT_PACKAGES += iFixit
 # Amaze File Manager
 PRODUCT_PACKAGES += Amaze
 
+# F-Droid Privileged Extension
+PRODUCT_PACKAGES += FDroidPrivilegedExtension
+
 # Add boot animation
 PRODUCT_COPY_FILES += device/fairphone_devices/FP2/bootanimation.zip:system/media/bootanimation.zip
 
