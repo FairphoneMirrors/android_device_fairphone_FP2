@@ -183,6 +183,9 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += iFixit
 
+# F-Droid Privileged Extension
+PRODUCT_PACKAGES += FDroidPrivilegedExtension
+
 PRODUCT_COPY_FILES += device/fairphone_devices/FP2/twrp.fstab:recovery/root/etc/twrp.fstab
 
 PRODUCT_MODEL := FP2
