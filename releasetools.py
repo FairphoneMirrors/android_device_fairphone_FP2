@@ -95,7 +95,7 @@ def SplitFwTypes(files):
 
     if dotSeparated[extIdx] == 'mbn':
       boot[f] = files[f]
-    elif dotSeparated[extIdx] == 'bin':
+    elif dotSeparated[extIdx] == 'bin' or dotSeparated[extIdx] == 'img':
       bin[f] = files[f]
     else:
       fw[f] = files[f]
