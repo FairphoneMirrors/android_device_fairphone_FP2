@@ -172,7 +172,7 @@ PRODUCT_PACKAGES += \
                     ClockWidget \
                     FairphoneSetupWizard \
                     ProgrammableButton \
-		    Checkup \
+                    FairphoneCheckup \
 		    FairphoneLauncher3
 
 PRODUCT_PACKAGES += iFixit
