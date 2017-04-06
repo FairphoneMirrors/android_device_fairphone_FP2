@@ -38,6 +38,10 @@ PRODUCT_COPY_FILES += device/fairphone_devices/FP2/Fiesta.mp3:system/media/audio
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.ringtone=Fairphone.mp3
 
+# Set default alarm sound
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.config.alarm_alert=Cesium.ogg
+
 $(call inherit-product, device/qcom/common/common.mk)
 
 PRODUCT_NAME := FP2
