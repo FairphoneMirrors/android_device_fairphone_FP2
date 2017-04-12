@@ -231,6 +231,9 @@ PRODUCT_PACKAGES += xdivert
 # We need to ship Mms for backward compatibility
 PRODUCT_PACKAGES += Mms
 
+# Ship the sound recorder app for backward compatibility with previous releases
+PRODUCT_PACKAGES += SoundRecorder
+
 # ProximitySensor app
 PRODUCT_PACKAGES += ProximitySensorTools
 # Don't forget that prebuilt that we need to make available
