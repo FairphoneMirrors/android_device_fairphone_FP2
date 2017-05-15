@@ -108,8 +108,7 @@ ADD_RADIO_FILES := true
 
 # Enable strict operation
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.sys.strict_op_enable=false \
-    persist.sys.usb.config=mtp
+    persist.sys.strict_op_enable=false
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.whitelist=/system/etc/whitelist_appops.xml
@@ -201,6 +200,12 @@ PRODUCT_COPY_FILES += \
 # remove /dev/diag in user version for CTS
 ifeq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_COPY_FILES += device/qcom/common/rootdir/etc/init.qcom.diag.rc.user:root/init.qcom.diag.rc
+endif
+
+# Enable the diagnostics interface by default in userdebug and eng builds
+ifneq (,$(filter userdebug eng,$(TARGET_BUILD_VARIANT)))
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    persist.sys.usb.config=diag
 endif
 
 ifeq ($(strip $(FP2_SKIP_BOOT_JARS_CHECK)),)
