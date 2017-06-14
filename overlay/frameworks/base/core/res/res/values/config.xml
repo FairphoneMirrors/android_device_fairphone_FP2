@@ -1,6 +1,4 @@
 <resources>
-    <bool name="config_enableAutoPowerModes">true</bool>
-
     <!-- Package name(s) containing location provider support.
          These packages can contain services implementing location providers,
          such as the Geocode Provider, Network Location Provider, and
