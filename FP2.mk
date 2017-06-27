@@ -209,7 +209,7 @@ ifeq ($(strip $(FP2_SKIP_BOOT_JARS_CHECK)),)
 SKIP_BOOT_JARS_CHECK := true
 endif
 
-PRODUCT_PACKAGE_OVERLAYS := device/fairphone_devices/FP2/overlay
+PRODUCT_PACKAGE_OVERLAYS += device/fairphone_devices/FP2/overlay
 
 # SuperUser
 FP2_USE_APPOPS_SU := true
