@@ -18,4 +18,8 @@
         <!-- UnifiedNlp (no GAPPS) support -->
         <item>com.google.android.gms</item>
     </string-array>
+
+    <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
+         autodetected from the Configuration. -->
+    <bool name="config_showNavigationBar">true</bool>
 </resources>
