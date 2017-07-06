@@ -248,3 +248,12 @@ PRODUCT_COPY_FILES += vendor/fairphone/packages/apps/ProximitySensor/prebuilts/b
 ifeq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_COPY_FILES += vendor/fairphone/packages/apps/ProximitySensor/prebuilts/lib/libsensor_test.so:$(PRODUCT_OUT)/system/vendor/lib/libsensor_test.so
 endif
+
+# Detection of what cameras are installed
+PRODUCT_PACKAGES += \
+					  init.fp.camera_detect.rc \
+					  init.fp.camera_cache_wipe.sh
+
+BOARD_SEPOLICY_DIRS += \
+					   device/fairphone_devices/FP2/camera_detect/sepolicy
+

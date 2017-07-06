@@ -1,0 +1,15 @@
+type camera_cache_wipe, domain, mlstrustedsubject;
+type camera_cache_wipe_exec, exec_type, file_type;
+
+# Allow for transition from init domain to camera_cache_wipe
+init_daemon_domain(camera_cache_wipe)
+
+# Allow executing a shell script
+allow camera_cache_wipe shell_exec:file { open read execute entrypoint };
+
+allow camera_cache_wipe app_data_file:dir { write search read remove_name open add_name };
+allow camera_cache_wipe app_data_file:file { rename setattr read create write relabelfrom getattr relabelto unlink open };
+allow camera_cache_wipe self:capability { fowner chown fsetid dac_override };
+allow camera_cache_wipe system_data_file:dir { read open };
+allow camera_cache_wipe system_file:file execute_no_trans;
+

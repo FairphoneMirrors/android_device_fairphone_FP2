@@ -30,6 +30,9 @@
 # Superuser
 import /init.superuser.rc
 
+# Camera_detect
+import /init.fp.camera_detect.rc
+
 on early-init
     mkdir /firmware 0771 system system
     symlink /data/tombstones /tombstones

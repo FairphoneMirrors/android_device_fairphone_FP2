@@ -1,0 +1,10 @@
+service cam_cache_wipe /system/bin/sh /system/etc/init.fp.camera_cache_wipe.sh
+    user root
+    group root
+    disabled
+    oneshot
+    seclabel u:r:camera_cache_wipe:s0
+
+on post-fs-data
+    start cam_cache_wipe
+
