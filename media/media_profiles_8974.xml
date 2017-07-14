@@ -149,7 +149,7 @@
 
     <EncoderProfile quality="480p" fileFormat="mp4" duration="30">
       <Video codec="h264"
-             bitRate="6000000"
+             bitRate="2000000"
              width="720"
              height="480"
              frameRate="30" />
@@ -299,7 +299,7 @@
 
     <EncoderProfile quality="timelapse480p" fileFormat="mp4" duration="30">
       <Video codec="h264"
-             bitRate="6000000"
+             bitRate="2000000"
              width="640"
              height="480"
              frameRate="30" />
@@ -402,7 +402,7 @@
 
     <EncoderProfile quality="480p" fileFormat="mp4" duration="30">
       <Video codec="h264"
-             bitRate="6000000"
+             bitRate="2000000"
              width="720"
              height="480"
              frameRate="30" />
@@ -415,7 +415,7 @@
 
     <EncoderProfile quality="720p" fileFormat="mp4" duration="30">
       <Video codec="h264"
-             bitRate="12000000"
+             bitRate="2000000"
              width="1280"
              height="720"
              frameRate="30" />
@@ -588,7 +588,7 @@
         maxHFRMode="60"  />
 
     <VideoEncoderCap name="h263" enabled="true"
-        minBitRate="128000" maxBitRate="4000000"
+        minBitRate="64000" maxBitRate="2000000"
         minFrameWidth="176" maxFrameWidth="800"
         minFrameHeight="144" maxFrameHeight="480"
         minFrameRate="15" maxFrameRate="30"
