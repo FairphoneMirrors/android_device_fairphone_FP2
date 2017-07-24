@@ -139,7 +139,7 @@ def OTA_VerifyEnd(info, api_version, target_zip, source_zip=None):
     if src_files is not None:
       sf = src_files.get(fn, None)
 
-    full = info.full_radio or sf is None or fn.endswith('.enc')
+    full = getattr(info, 'full_radio', False) or sf is None or fn.endswith('.enc')
     if not full:
       # no difference - skip this file
       if tf.sha1 == sf.sha1:
