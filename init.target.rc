@@ -83,6 +83,7 @@ on boot
     chown system drmrpc /sys/devices/f9924000.i2c/i2c-2/2-004a/secure_touch
     chmod 0775 /persist
     chmod 0444 /persist/board_date.bin
+    chmod 0444 /persist/phoneid.bin
     chown system root /persist/sns.reg
     chmod 770  /persist/sns.reg
 
