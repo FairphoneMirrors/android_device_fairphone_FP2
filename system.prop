@@ -150,3 +150,6 @@ persist.radio.flexmap_type=none
 
 #enable OTG support
 persist.sys.isUsbOtgEnabled=true
+
+#enable tintless rolloff for camera
+persist.camera.tintless=enable
