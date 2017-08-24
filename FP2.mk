@@ -235,6 +235,7 @@ PRODUCT_PACKAGES += Mms
 
 # Ship the ModuleDetect app to inform users of a sucessful camera swap
 PRODUCT_PACKAGES += ModuleDetect
+PRODUCT_PACKAGES += CameraSwapInfo
 
 # Ship the sound recorder app for backward compatibility with previous releases
 PRODUCT_PACKAGES += SoundRecorder
