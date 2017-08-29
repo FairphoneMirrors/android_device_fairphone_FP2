@@ -253,7 +253,8 @@ endif
 # Detection of what cameras are installed
 PRODUCT_PACKAGES += \
 					  init.fp.camera_detect.rc \
-					  init.fp.camera_cache_wipe.sh
+					  init.fp.camera_detect.sh \
+					  init.fp.camera_preference_wipe.sh
 
 BOARD_SEPOLICY_DIRS += \
 					   device/fairphone_devices/FP2/camera_detect/sepolicy

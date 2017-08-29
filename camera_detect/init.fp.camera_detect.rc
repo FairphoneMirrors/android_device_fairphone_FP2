@@ -1,10 +1,19 @@
-service cam_cache_wipe /system/bin/sh /system/etc/init.fp.camera_cache_wipe.sh
+service cam_pref_wipe /system/bin/sh /system/etc/init.fp.camera_preference_wipe.sh
     user root
     group root
     disabled
     oneshot
-    seclabel u:r:camera_cache_wipe:s0
+    seclabel u:r:camera_detect:s0
 
-on post-fs-data
-    start cam_cache_wipe
+service cam_detect /system/bin/sh /system/etc/init.fp.camera_detect.sh
+    user root
+    group root
+    disabled
+    oneshot
+    seclabel u:r:camera_detect:s0
 
+on property:fp2.any.cam.changed=1
+    start cam_pref_wipe
+
+on property:init.svc.bootanim=stopped
+    start cam_detect
