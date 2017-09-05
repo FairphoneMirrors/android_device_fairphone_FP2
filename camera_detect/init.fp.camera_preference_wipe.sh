@@ -9,7 +9,7 @@ readonly FILES_TO_WIPE="\
 "
 readonly PREFERENCE_TO_WIPE_RES_CACHE="CachedSupportedPictureSizes_Build_Camera"
 readonly PREFERENCE_TO_WIPE_RES_FRONT="pref_camera_picturesize_front_key"
-readonly PREFERENCE_TO_WIPE_RES_MAIN="pref_camera_picturesize_main_key"
+readonly PREFERENCE_TO_WIPE_RES_MAIN="pref_camera_picturesize_back_key"
 
 readonly ANY_CAM_CHANGED_PROPERTY="fp2.cam.any.changed"
 readonly FRONT_CAM_CHANGED_PROPERTY="fp2.cam.front.changed"
@@ -29,17 +29,17 @@ function _remove_preferences() {
     local access_bits="$(stat -c '%a' "${file_to_wipe}")"
     local context="$(ls -Z "${file_to_wipe}" | grep -o "u:object_r:[^ ]*")"
 
-    if [ "$ANY_CAM_CHANGED"=="1" ]
+    if [ "${ANY_CAM_CHANGED}" == "1" ]
         then
         sed -i "/${PREFERENCE_TO_WIPE_RES_CACHE}/d" "${file_to_wipe}"
     fi
 
-    if [ "$FRONT_CAM_CHANGED"=="1" ]
+    if [ "${FRONT_CAM_CHANGED}" == "1" ]
         then
         sed -i "/${PREFERENCE_TO_WIPE_RES_FRONT}/d" "${file_to_wipe}"
     fi
 
-    if [ "$MAIN_CAM_CHANGED"=="1" ]
+    if [ "${MAIN_CAM_CHANGED}" == "1" ]
         then
         sed -i "/${PREFERENCE_TO_WIPE_RES_MAIN}/d" "${file_to_wipe}"
     fi
