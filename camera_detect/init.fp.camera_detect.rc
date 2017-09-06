@@ -12,7 +12,7 @@ service cam_detect /system/bin/sh /system/etc/init.fp.camera_detect.sh
     oneshot
     seclabel u:r:camera_detect:s0
 
-on property:fp2.any.cam.changed=1
+on property:fp2.cam.any.changed=1
     start cam_pref_wipe
 
 on property:init.svc.bootanim=stopped
