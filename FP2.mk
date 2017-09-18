@@ -190,10 +190,6 @@ PRODUCT_MODEL := FP2
 # include an expanded selection of fonts for the SDK.
 EXTENDED_FONT_FOOTPRINT := true
 
-# Preferred Applications for Fairphone
-PRODUCT_COPY_FILES += \
-    device/fairphone_devices/FP2/preferred.xml:system/etc/preferred-apps/fp.xml
-
 # remove /dev/diag in user version for CTS
 ifeq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_COPY_FILES += device/qcom/common/rootdir/etc/init.qcom.diag.rc.user:root/init.qcom.diag.rc
