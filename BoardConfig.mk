@@ -20,6 +20,9 @@ TARGET_HAS_QC_KERNEL_SOURCE := true
 
 -include $(QCPATH)/common/msm8974/BoardConfigVendor.mk
 
+# Vendor-specific definitions
+include vendor/fairphone/FP2/BoardConfigVendor.mk
+
 #TODO: Fix-me: Setting TARGET_HAVE_HDMI_OUT to false
 # to get rid of compilation error.
 TARGET_HAVE_HDMI_OUT := false

@@ -32,16 +32,14 @@ PRODUCT_PROPERTY_OVERRIDES := $(filter-out ro.com.android.dataroaming=%,\
     $(PRODUCT_PROPERTY_OVERRIDES)) \
     ro.com.android.dataroaming=false
 
-# Set default ringtone to Fairphone's
-PRODUCT_COPY_FILES += device/fairphone_devices/FP2/Sunbeam.mp3:system/media/audio/ringtones/Fairphone.mp3
-PRODUCT_COPY_FILES += device/fairphone_devices/FP2/Fiesta.mp3:system/media/audio/ringtones/Fiesta.mp3
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.config.ringtone=Fairphone.mp3
-
 # Set default alarm sound
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.alarm_alert=Cesium.ogg
 
+# Vendor-specific definitions, including branding assets
+$(call inherit-product, vendor/fairphone/FP2/device-vendor.mk)
+
+# Common definitions to set undefined properties
 $(call inherit-product, device/qcom/common/common.mk)
 
 PRODUCT_NAME := FP2
@@ -176,9 +174,6 @@ PRODUCT_PACKAGES += \
 		    FairphoneLauncher3
 
 PRODUCT_PACKAGES += iFixit
-
-# Add boot animation
-PRODUCT_COPY_FILES += device/fairphone_devices/FP2/bootanimation.zip:system/media/bootanimation.zip
 
 PRODUCT_COPY_FILES += device/fairphone_devices/FP2/twrp.fstab:recovery/root/etc/twrp.fstab
 
