@@ -171,9 +171,6 @@ endif
 
 PRODUCT_PACKAGES += \
                     FairphoneUpdater \
-                    AppOps \
-                    ClockWidget \
-                    FairphoneSetupWizard \
                     ProgrammableButton \
                     FairphoneCheckup \
 		    FairphoneLauncher3
