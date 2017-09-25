@@ -36,6 +36,10 @@ PRODUCT_PROPERTY_OVERRIDES := $(filter-out ro.com.android.dataroaming=%,\
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.alarm_alert=Cesium.ogg
 
+# Allow mediaserver to allocate up to 75% of total RAM
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.media.maxmem=1451891712
+
 # setup dalvik vm configs.
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
