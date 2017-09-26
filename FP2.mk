@@ -36,6 +36,9 @@ PRODUCT_PROPERTY_OVERRIDES := $(filter-out ro.com.android.dataroaming=%,\
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.alarm_alert=Cesium.ogg
 
+# setup dalvik vm configs.
+$(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
+
 # Vendor-specific definitions, including branding assets
 $(call inherit-product, vendor/fairphone/FP2/device-vendor.mk)
 
