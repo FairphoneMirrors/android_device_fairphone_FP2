@@ -237,13 +237,6 @@ PRODUCT_PACKAGES += SoundRecorder
 
 # ProximitySensor app
 PRODUCT_PACKAGES += ProximitySensorTools
-# Don't forget that prebuilt that we need to make available
-PRODUCT_COPY_FILES += vendor/fairphone/packages/apps/ProximitySensor/prebuilts/bin/senread:$(PRODUCT_OUT)/system/bin/senread
-
-# Also include the test shared library required by `senread`, not built in regular builds
-ifeq ($(TARGET_BUILD_VARIANT),user)
-PRODUCT_COPY_FILES += vendor/fairphone/packages/apps/ProximitySensor/prebuilts/lib/libsensor_test.so:$(PRODUCT_OUT)/system/vendor/lib/libsensor_test.so
-endif
 
 # Detection of what cameras are installed
 PRODUCT_PACKAGES += \
@@ -254,3 +247,4 @@ PRODUCT_PACKAGES += \
 BOARD_SEPOLICY_DIRS += \
 					   device/fairphone_devices/FP2/camera_detect/sepolicy
 
+PRODUCT_PACKAGES += senread
