@@ -61,7 +61,7 @@ function _detect_and_persist_sensor_change() {
            && [[ -n "${old_sensor}" ]] \
            && [[ "${old_sensor}" != "${new_sensor}" ]] ; then
             setprop "${PROP_PATH}.${pos}.${CHANGED_FRAGMENT}" "1"
-            setprop "${PROP_PATH}.${ANY_FRAGMENT}.${CHANGED_FRAGMENT}" "1"
+            changed_any_sensor=1
         fi
 
         # set new persist value with the new sensor name if it's non-empty
@@ -77,9 +77,9 @@ function _detect_and_persist_sensor_change() {
 function _camera_detect_service() {
     _detect_main_sensor
     _detect_front_sensor
-    # set to 0 by default; will be set to 1 if necessary later
-    setprop "${PROP_PATH}.${ANY_FRAGMENT}.${CHANGED_FRAGMENT}" "0"
-    _detect_and_persist_sensor_change
+    local changed_any_sensor="$(_detect_and_persist_sensor_change)"
+    setprop "${PROP_PATH}.${ANY_FRAGMENT}.${CHANGED_FRAGMENT}" \
+        "${changed_any_sensor}"
 }
 
 _camera_detect_service
