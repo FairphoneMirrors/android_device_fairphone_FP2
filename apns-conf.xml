@@ -324,10 +324,8 @@
   <apn carrier="KPN Mobiel Internet"
       mcc="204"
       mnc="08"
-      apn="internet"
-      type="default,internet"
-      protocol="IPV4V6"
-      roaming_protocol="IPV4V6"
+      apn="portalmmm.nl"
+      type="default,supl"
   />
 
   <apn carrier="Rabo Mobiel Int."
