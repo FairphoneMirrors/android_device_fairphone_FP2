@@ -252,3 +252,6 @@ BOARD_SEPOLICY_DIRS += \
 					   device/fairphone_devices/FP2/camera_detect/sepolicy
 
 PRODUCT_PACKAGES += senread
+
+# Fairphone Common framework
+$(call inherit-product, vendor/fairphone/frameworks/common/common.mk)
