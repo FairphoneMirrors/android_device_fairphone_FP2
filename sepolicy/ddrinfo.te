@@ -1,0 +1,8 @@
+# /proc/sys/dev/ddr/* nodes give access to the DDR chipset information
+
+# The nodes live in a pseudo filesystem
+type proc_dev_ddr, fs_type;
+
+# Give read access to the platform apps
+r_dir_file(platform_app, proc_dev_ddr)
+r_dir_file(system_app, proc_dev_ddr)
